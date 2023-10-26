@@ -1,0 +1,702 @@
+Title: Bootstrap Components Assignment
+
+Objective:
+This assignment aims to evaluate your comprehension of various Bootstrap components, including Card, Carousel, Close Button, Collapse, and Dropdown. You will be tasked with creating and customizing these components within a web page.
+
+Instructions:
+
+Part 1:
+
+1.1 Create Bootstrap Cards displaying information about different items (e.g., products, articles).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Cards Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Product 1</h5>
+          <p class="card-text">Description of Product 1.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+   </div>
+  
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Product 2</h5>
+          <p class="card-text">Description of Product 2.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+  </div>
+  
+  <!-- Add more cards as needed -->
+  
+</div>
+
+</body>
+</html>
+
+1.2 Customize each card with relevant content, including images, text, and buttons.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Bootstrap Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image2.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Description of Product 1.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image1.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description of Product 2.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="girl.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">Description of Product 3.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+1.3 Implement a click event on one of the card buttons that opens a Bootstrap Modal with additional details about the item.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  
+  <div class="container">
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Item 1</h5>
+            <p class="card-text">Description of Item 1.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#itemModal1">Open Modal</button>
+        </div>
+      </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Item 2</h5>
+            <p class="card-text">Description of Item 2.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#itemModal2">Open Modal</button>
+        </div>
+    </div>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="itemModal1" tabindex="-1" role="dialog" aria-labelledby="itemModal1Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="itemModal1Label">Item 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  Details for Item 1.
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div class="modal fade" id="itemModal2" tabindex="-1" role="dialog" aria-labelledby="itemModal2Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="itemModal2Label">Item 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  Details for Item 2.
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+Part 2:
+
+2.1 Develop a Bootstrap Carousel featuring at least three slides.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="girl.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="image1.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="image2.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+2.2 Customize each slide with distinct content, including images and captions.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="girl.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="image1.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="image2.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+2.3 Add navigation controls (previous and next) to allow users to cycle through the carousel manually.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="girl.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="image1.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="image2.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+
+Part 3:
+
+3.1 Integrate Bootstrap Close Buttons into elements (e.g., alerts, modals) on your page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Close Button in Alert</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            This is an alert with a close button.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+3.2 Customize the elements to include the Close Button, allowing users to dismiss them.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Alert with Close Button</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Customized Alert!</strong> This is a customized alert with a close button.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+Part 4:
+
+4.1 Create Bootstrap Collapse components with a trigger button and collapsible content.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Collapse Example</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Add Bootstrap JS and jQuery links -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Bootstrap Collapse Example</h1>
+        <p>
+            Click the button to toggle the collapsible content.
+        </p>
+
+        <!-- Trigger Button -->
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Toggle Collapsible Content
+        </button>
+
+        <!-- Collapsible Content -->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                This is the collapsible content. You can add any content you want here.
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
+
+
+4.2 Customize the content within the collapse to display relevant information.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Collapse Content</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .container{
+        border: 2px solid red;
+      }
+      .card{
+        border: 3px solid green;
+      }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Customized Collapse Content</h1>
+        <p>
+            Click the button to toggle the collapsible content.
+        </p>
+
+        <!-- Trigger Button -->
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Toggle Collapsible Content
+        </button>
+
+        <!-- Collapsible Content -->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <!-- Customized Content -->
+                <h2>Relevant Information</h2>
+                <p>This is some relevant information you want to display in the collapsible section.</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </form>
+                <!-- End of Customized Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+4.3 Implement multiple collapse sections on the page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Collapse Sections</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Multiple Collapse Sections</h1>
+        
+        <!-- First Collapse Section -->
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                Toggle Section 1
+            </button>
+            <div class="collapse" id="collapse1">
+                <div class="card card-body">
+                    <h2>Section 1</h2>
+                    <p>This is the content of section 1.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Collapse Section -->
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Toggle Section 2
+            </button>
+            <div class="collapse" id="collapse2">
+                <div class="card card-body">
+                    <h2>Section 2</h2>
+                    <p>This is the content of section 2.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Third Collapse Section -->
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                Toggle Section 3
+            </button>
+            <div class="collapse" id="collapse3">
+                <div class="card card-body">
+                    <h2>Section 3</h2>
+                    <p>This is the content of section 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+Part 5:
+
+5.1 Develop Bootstrap Dropdowns with different styles (e.g., split, right-aligned).
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+
+      <ul class="dropdown-menu" >
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+</div>
+</body>
+</html>
+
+5.2 Customize the dropdown items with relevant options.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+
+      <ul class="dropdown-menu" >
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+</div>
+</body>
+</html>
+
+5.3 Implement a card with a dropdown button that, when clicked, displays additional actions.(Not Working)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with Dropdown Button</title>
+    <!-- Add Bootstrap CSS and JavaScript links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Card with Dropdown Button</h1>
+        
+        <!-- Bootstrap Card -->
+        <div class="card">
+            <div class="card-header">
+                Card Header
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text">This is some content for the card.</p>
+                
+                <!-- Dropdown Button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Actions
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="#">Action 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+Exercise: E-commerce Product Page
+
+Imagine you are tasked with creating an e-commerce product page for an online store using Bootstrap components. The goal is to provide users with an engaging and 
+interactive experience. Combine the Card, Carousel, Close Button, Collapse, and Dropdown components to create a seamless user interface.
+
+Card Display:
+
+Create Bootstrap Cards to represent different products in your online store.
+Customize each card with product images, names, and a brief description.
+Add buttons on each card to view more details and make a purchase.
+
+Carousel Highlight:
+
+Implement a Bootstrap Carousel at the top of the page to showcase featured products.
+Each slide in the carousel should display an image and a caption describing the featured product.
+
+Quick View Modal:
+
+When a user clicks on the "View Details" button on a card, open a Bootstrap Modal.
+Customize the modal to display more detailed information about the selected product, including additional images, specifications, and a close button.
+
+Product Description Collapse:
+
+Add a Bootstrap Collapse component to the product details section.
+Display a brief product description by default and allow users to expand and collapse the full description.
+
+Product Options Dropdown:
+
+Implement a Bootstrap Dropdown for product options (e.g., size, color).
+Allow users to select different options for the product using the dropdown.
+Incorporate Bootstrap alerts to provide users with feedback when adding items to the cart.
+Enhance the user experience by adding smooth transitions and animations where appropriate.
+
+Submission Guidelines:
+Make sure the excercise is fully responsive.
+Create an HTML file for the e-commerce product page.
+Include necessary Bootstrap CSS and JavaScript files.
+Organize your files in a clear directory structure.
+Ensure your code is well-documented and follows Bootstrap best practices.
+Submit your project files or provide a link to the repository.
